@@ -104,8 +104,9 @@ ubuntu@ip-172-31-50-35
    * Go to api-gateway folder of your backend app
    * type: `idea build.gradle
    * in the src folder in the main file: ZuulGatewayApi.java and add this:
+   
    ```@Bean
-public CorsFilter corsFilter() {
+     public CorsFilter corsFilter() {
 
     final UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
     final CorsConfiguration config = new CorsConfiguration();
@@ -117,9 +118,9 @@ public CorsFilter corsFilter() {
     return new CorsFilter(source);
     ```
     You will endup with with this file:
-    ```
-    package com.example.apigateway;
 
+```
+package com.example.apigateway;
 import com.netflix.ribbon.proxy.annotation.Http;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -154,6 +155,7 @@ public class ZuulGatewayApplication {
         return new CorsFilter(source);
 }
 ```
+
 *add and commit to github
 
 
