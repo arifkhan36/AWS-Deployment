@@ -1,4 +1,4 @@
-# AWS SITE DEPLOYMENT
+# AWS SITE DEPLOYMENT-steps....
 1.  Click on the services
 2.  Click on the Storage S3
 3.  Create a bucket
