@@ -1,6 +1,6 @@
 # AWS SITE DEPLOYMENT
- click on the services
- Click on the Storage S3
+  click on the services
+  Click on the Storage S3
  Create a bucket
  Name a bucket and hit next skipping all the steps until you create the bucket
  Click on the bucket and then choose properties tab
