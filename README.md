@@ -18,3 +18,16 @@ Note: YOU GOTTA HAVE REACT_APP
 ```
 await axios.get(process.env.REACT_APP_HOST +'/users')
 ```
+NOTE: do this for all the requests involving the link
+# BACK to AMAZON site
+5. Config AWS CLI.
+6. Go to AWS console at the website and choose the IAM console
+7. Hit next permissions and Create a user group
+8. Name the group: 'SecaAdmins'
+9. Once it's createad click on the SecaAdmin
+10. Choose users
+11. Choose new user
+12. Add a user name and choose Progammatic access hit next
+13. you should have the access key ID and Secret key access
+14. Save the key id and secret key access
+15. Close it
