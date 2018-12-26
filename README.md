@@ -68,10 +68,14 @@ NOTE: Make sure every source field is set to: 0.0.0.0/0, ::/0
 11. At the bottom of the screen you will PUBLIC DNS (IPV4) copy that and:
 # Back to command line
 1. Once you've had your key-pair downloaded:
-Type ssh -i ~/Downloads/seca-keypair.pem ubuntu@ec2-35-173-178-66.compute-1.amazonaws.com
+Type ssh -i ~/Downloads/seca-keypair.pem   ubuntu@ec2-35-173-178-66.compute-1.amazonaws.com
+
 Don't forget to add ubuntu@ to your public DNS
+
 if you run into permission problems, try: chmod 400 ~/Downloads/seca-keypair.pem
+
 and then run the command again ssh -i ~/Downloads/seca-keypair.pem ubuntu@ec2-35-173-178-66.compute-1.amazonaws.com
+
 You should see something like this in your terminal:
 
 ubuntu@ip-172-31-50-35
