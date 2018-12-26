@@ -31,3 +31,16 @@ NOTE: do this for all the requests involving the link
 13. you should have the access key ID and Secret key access
 14. Save the key id and secret key access
 15. Close it
+# COMMAND LINE
+16. At the command line type ```aws configure```
+17. Add your keys and region:
+    ```
+    AWS Access Key ID [None]: **********************
+    AWS Secret Access Key [None]: **********************
+    Default region name [None]: us-east-1
+    Default output format [None]: json
+    ```
+18. npm install 
+19. npm run build 
+20. Sanity check, type on command line: aws s3 ls It should return a list of buckets available 
+21. Sync the folder with the bucket: aws s3 sync build/ s3://bucket-seca-md
