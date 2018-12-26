@@ -158,4 +158,24 @@ public class ZuulGatewayApplication {
 
 *add and commit to github
 
+2. Go back to the Ubuntu instance (ubuntu terminal)
+
+3. Go to your backend project (if it's in the github and clone it)
+
+4. Go to the wrapper directory and type ```sudo docker-compose up```
+
+5. Go to EC2 get the PUBLIC DNS IPV4 and add to your browser: ```http://ec2-35-173-178-66.compute-1.amazonaws.com:8080/users```
+
+6. now back to the the front end portion edit the .env and replace the localhost for your EC2 IPV4 address: ```http://ec2-35-173-178-66.compute-1.amazonaws.com:8080```
+
+NOTE: if you run into errors, just copy the link into axios...
+
+7. type ```npm build```
+8. Sync the folder with the bucket: ```aws s3 sync build/ s3://bucket-seca-md```
+NOTE IF YOU GOT ACCESS ERROR:
+
+Go to your bucket and choose overview and select upload: Choose upload and upload all the content from inside of your build directory
+
+Once is done, choose properties and click on Static website hosting and you might see the link there, click on it and you will see your website hosting.
+
 
