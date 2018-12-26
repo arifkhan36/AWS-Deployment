@@ -42,5 +42,27 @@ NOTE: do this for all the requests involving the link
     ```
 18. npm install 
 19. npm run build 
-20. Sanity check, type on command line: aws s3 ls It should return a list of buckets available 
-21. Sync the folder with the bucket: aws s3 sync build/ s3://bucket-seca-md
+20. Sanity check, type on command line: ```aws s3 ls``` It should return a list of buckets available 
+21. Sync the folder with the bucket: ```aws s3 sync build/ s3://bucket-seca-md```
+NOTE IF YOU GOT ACCESS ERROR:
+Go to your bucket and choose overview and select upload: Choose upload and upload all the content from inside of your build directory.
+
+Once is done, choose properties and click on Static website hosting and you might see the link there, click on it and you will see your website hosting.
+
+# Updating and configure your server for scalability
+1. Go to EC2 and choose launch instance
+2. Choose Ubuntu Server 16.04
+3. Choosing the free tier for Microservices is not good... So choose T2 Large
+4. Don't choose nothing on step 3
+5. Step 4 choose 16 Gb
+6. Step 5 add tags don't add one now
+7. Step 6 Configuring SSH
+ * Add a rule 'Custom TCP' 8080 (for our API gateway)
+ * Add a rule 'Custom TCP' 8761 (for Eureka)
+ * Add a rule 'Custom TCP' 5432 (for the database)
+NOTE: Make sure every source field is set to: 0.0.0.0/0, ::/0
+
+8. Review and launch
+9. It's going to as for a key pair. Choose create a key pair and add key-pair and download it.
+10. Launch and see.
+11. At the bottom of the screen you will PUBLIC DNS (IPV4) copy that and:
