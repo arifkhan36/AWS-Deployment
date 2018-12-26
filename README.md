@@ -7,5 +7,5 @@
 6. Choose Static website hosting and choose "Use this bucket to host a website"
 # FrontEnd/REACT SIDE
 1. Create a .env file in the root folder and add this local variable
+```REACT_APP_HOST=http://localhost:8080```
 
-REACT_APP_HOST=http://localhost:8080
