@@ -10,4 +10,10 @@
 ```
 REACT_APP_HOST=http://localhost:8080
 ```
-
+Note: YOU GOTTA HAVE REACT_APP
+2. Remove proxy containng http://localhost:8080 from package.json
+3. Remove registerServiceWorker(); from index.js file
+4. Fixing axios in the app.js
+```
+await axios.get(process.env.REACT_APP_HOST +'/users')
+```
